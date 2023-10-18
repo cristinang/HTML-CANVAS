@@ -75,16 +75,18 @@ var ctx = canvas.getContext("2d");
 //ctx.createLinearGradient(x1,y1,x2,y2);
 
 var grd = ctx.createLinearGradient(0,300,100,300);
-grd.addColorStop(0,"cyan");
-grd.addColorStop(1,"pink");
-ctx.fillStyle=grd;
-ctx.fillRect(0,300,100,100);
-
-//ctx.createLinearGradient(x1,y1,x2,y2);
-
-var grd = ctx.createLinearGradient(0,300,200,400);
 grd.addColorStop(0,"pink");
 grd.addColorStop(1,"cyan");
 ctx.fillStyle=grd;
-ctx.fillRect(900,300,200,100);
+ctx.fillRect(0,300,100,100);
+
+//ctx.createRadialGradient(x1,y1,r1,x2,y2,r2);
+
+var grd2 = ctx.createRadialGradient(890,350,5,900,400,120);
+grd2.addColorStop(0,"pink");
+grd2.addColorStop(1,"cyan");
+ctx.beginPath();
+ctx.arc(900,400,100,0,7);
+ctx.fillStyle = grd2;
+ctx.fill();
 
